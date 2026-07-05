@@ -21,7 +21,7 @@ function CreateProduct() {
   async function submitHandler(e) {
     e.preventDefault();
     const res = await axios.post(
-      "https://ecom-91-node.onrender.com/create",
+      `${process.env.VITE_APP_BACKEND_URL}/create`,
       product,
     );
     console.log(res);

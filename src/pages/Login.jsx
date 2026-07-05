@@ -18,7 +18,7 @@ function Login() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://ecom-91-node.onrender.com/login",
+        `${process.env.VITE_APP_BACKEND_URL}/login`,
         authData,
       );
       console.log(res);

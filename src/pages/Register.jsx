@@ -19,7 +19,7 @@ function Register() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://ecom-91-node.onrender.com/register",
+        `${process.env.VITE_APP_BACKEND_URL}/register`,
         authData,
       );
       console.log(res);

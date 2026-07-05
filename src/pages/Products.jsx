@@ -8,7 +8,7 @@ function Products() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
   async function fetchProducts() {
-    const res = await axios.get("https://ecom-91-node.onrender.com/products");
+    const res = await axios.get(`${process.env.VITE_APP_BACKEND_URL}/products`);
     setProducts(res.data);
   }
   useEffect(() => {
@@ -16,7 +16,7 @@ function Products() {
   }, []);
   async function deleteProduct(id) {
     const data = await axios.delete(
-      `https://ecom-91-node.onrender.com/products/${id}`,
+      `${process.env.VITE_APP_BACKEND_URL}/products/${id}`,
     );
     const singleProduct = products.filter(
       (meriProduct) => meriProduct._id !== id,

@@ -23,7 +23,7 @@ function EditProduct() {
   async function submitHandler(e) {
     e.preventDefault();
     const res = await axios.patch(
-      `https://ecom-91-node.onrender.com/products/${params.id}`,
+      `${process.env.VITE_APP_BACKEND_URL}/products/${params.id}`,
       product,
     );
     console.log(res);
@@ -39,7 +39,7 @@ function EditProduct() {
   }
   async function getProductById() {
     const res = await axios.get(
-      `https://ecom-91-node.onrender.com/products/${params.id}`,
+      `${process.env.VITE_APP_BACKEND_URL}/products/${params.id}`,
     );
     console.log(res.data);
     setProduct(res.data);
