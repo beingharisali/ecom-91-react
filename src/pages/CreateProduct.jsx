@@ -21,7 +21,7 @@ function CreateProduct() {
   async function submitHandler(e) {
     e.preventDefault();
     const res = await axios.post(
-      `${process.env.VITE_APP_BACKEND_URL}/create`,
+      `${process.env.VITE_PUBLIC_BACKEND_URL}/create`,
       product,
     );
     console.log(res);

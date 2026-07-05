@@ -19,7 +19,7 @@ function Register() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${process.env.VITE_APP_BACKEND_URL}/register`,
+        `${process.env.VITE_PUBLIC_BACKEND_URL}/register`,
         authData,
       );
       console.log(res);

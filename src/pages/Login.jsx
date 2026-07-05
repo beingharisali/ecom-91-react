@@ -18,7 +18,7 @@ function Login() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${process.env.VITE_APP_BACKEND_URL}/login`,
+        `${process.env.VITE_PUBLIC_BACKEND_URL}/login`,
         authData,
       );
       console.log(res);
