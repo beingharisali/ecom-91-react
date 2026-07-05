@@ -5,6 +5,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  define: {
+    'process.env.API_URL': JSON.stringify(process.env.API_URL ?? 'http://localhost:8000'),
+  },
   plugins: [
     react(),
      tailwindcss(),

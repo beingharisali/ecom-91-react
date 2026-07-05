@@ -17,11 +17,9 @@ function Register() {
   }
   async function submitHandler(e) {
     e.preventDefault();
+    console.log("process", process.env);
     try {
-      const res = await axios.post(
-        `${process.env.VITE_API_URL}/register`,
-        authData,
-      );
+      const res = await axios.post(`${process.env.API_URL}/register`, authData);
       console.log(res);
       setAuthData({
         username: "",
