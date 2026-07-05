@@ -23,7 +23,7 @@ function EditProduct() {
   async function submitHandler(e) {
     e.preventDefault();
     const res = await axios.patch(
-      `${process.env.VITE_PUBLIC_BACKEND_URL}/products/${params.id}`,
+      `${process.env.API_URL}/products/${params.id}`,
       product,
     );
     console.log(res);
@@ -38,9 +38,7 @@ function EditProduct() {
     navigate("/products");
   }
   async function getProductById() {
-    const res = await axios.get(
-      `${process.env.VITE_PUBLIC_BACKEND_URL}/products/${params.id}`,
-    );
+    const res = await axios.get(`${process.env.API_URL}/products/${params.id}`);
     console.log(res.data);
     setProduct(res.data);
   }

@@ -17,10 +17,7 @@ function Login() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.post(
-        `${process.env.VITE_PUBLIC_BACKEND_URL}/login`,
-        authData,
-      );
+      const res = await axios.post(`${process.env.API_URL}/login`, authData);
       console.log(res);
       setAuthData({
         email: "",

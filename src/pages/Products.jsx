@@ -15,9 +15,7 @@ function Products() {
     fetchProducts();
   }, []);
   async function deleteProduct(id) {
-    const data = await axios.delete(
-      `${process.env.VITE_PUBLIC_BACKEND_URL}/products/${id}`,
-    );
+    const data = await axios.delete(`${process.env.API_URL}/products/${id}`);
     const singleProduct = products.filter(
       (meriProduct) => meriProduct._id !== id,
     );
