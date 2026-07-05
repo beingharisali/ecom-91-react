@@ -30,7 +30,7 @@ function CreateProduct() {
       rating: "",
       review: "",
     });
-    navigate("/");
+    navigate("/products");
   }
   return (
     <div className="container">

@@ -35,7 +35,7 @@ function EditProduct() {
       rating: "",
       review: "",
     });
-    navigate("/");
+    navigate("/products");
   }
   async function getProductById() {
     const res = await axios.get(`http://localhost:8000/products/${params.id}`);

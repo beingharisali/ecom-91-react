@@ -25,7 +25,7 @@ function Register() {
         email: "",
         password: "",
       });
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       console.log("error", error);
     }
@@ -65,7 +65,7 @@ function Register() {
           />
         </Form.Group>
         <p>
-          Already have an account? <Link to="/login">Login</Link>
+          Already have an account? <Link to="/">Login</Link>
         </p>
 
         <Button variant="success" type="submit">

@@ -23,9 +23,9 @@ function Login() {
         email: "",
         password: "",
       });
-      navigate("/");
-    } catch (error) {
-      console.log(error);
+      navigate("/products");
+    } catch (err) {
+      console.log("err", err);
     }
   }
   return (
