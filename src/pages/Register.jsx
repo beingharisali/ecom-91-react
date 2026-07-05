@@ -18,7 +18,10 @@ function Register() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/register", authData);
+      const res = await axios.post(
+        "https://ecom-91-node.onrender.com/register",
+        authData,
+      );
       console.log(res);
       setAuthData({
         username: "",

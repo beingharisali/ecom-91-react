@@ -20,7 +20,10 @@ function CreateProduct() {
   }
   async function submitHandler(e) {
     e.preventDefault();
-    const res = await axios.post("http://localhost:8000/create", product);
+    const res = await axios.post(
+      "https://ecom-91-node.onrender.com/create",
+      product,
+    );
     console.log(res);
     toast.success("Product created successfully");
     setProduct({

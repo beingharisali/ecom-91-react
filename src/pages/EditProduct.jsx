@@ -23,7 +23,7 @@ function EditProduct() {
   async function submitHandler(e) {
     e.preventDefault();
     const res = await axios.patch(
-      `http://localhost:8000/products/${params.id}`,
+      `https://ecom-91-node.onrender.com/products/${params.id}`,
       product,
     );
     console.log(res);
@@ -38,7 +38,9 @@ function EditProduct() {
     navigate("/products");
   }
   async function getProductById() {
-    const res = await axios.get(`http://localhost:8000/products/${params.id}`);
+    const res = await axios.get(
+      `https://ecom-91-node.onrender.com/products/${params.id}`,
+    );
     console.log(res.data);
     setProduct(res.data);
   }

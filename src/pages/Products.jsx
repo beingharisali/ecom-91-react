@@ -8,14 +8,16 @@ function Products() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
   async function fetchProducts() {
-    const res = await axios.get("http://localhost:8000/products");
+    const res = await axios.get("https://ecom-91-node.onrender.com/products");
     setProducts(res.data);
   }
   useEffect(() => {
     fetchProducts();
   }, []);
   async function deleteProduct(id) {
-    const data = await axios.delete(`http://localhost:8000/products/${id}`);
+    const data = await axios.delete(
+      `https://ecom-91-node.onrender.com/products/${id}`,
+    );
     const singleProduct = products.filter(
       (meriProduct) => meriProduct._id !== id,
     );
